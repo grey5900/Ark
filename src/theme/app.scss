@@ -1,0 +1,146 @@
+
+body, input, textarea {
+  font-family: 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', sans-serif, SimHei;
+  -webkit-font-smoothing: antialiased
+}
+
+html, .full-height, .loadedContent {
+  height: 100%;
+}
+
+a {
+  cursor: pointer;
+}
+
+body {
+  min-height: 100%;
+  min-width: 320px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  color: #88939C;
+}
+
+body:before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+
+#content {
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.pull-right {
+  float: right !important;
+}
+
+//for table
+
+tr:nth-child(even) {
+  background-color: rgb(242, 248, 246) !important;
+}
+
+td {
+  line-height: 30px !important;
+}
+
+// for sidebar
+li.divider {
+  background-color: #232730;
+  height: 1px;
+}
+
+li.active {
+  a, a:hover, a:focus {
+    background-color: #00D5C9;
+    color: white;
+    border: none;
+  }
+  .control-icon [stroke] {
+    stroke: white;
+  }
+}
+
+.ui.pagination.menu {
+  border: 0;
+  box-shadow: none;
+  border-radius: 0;
+  .item {
+    min-width: initial;
+    margin: 0.625em 0.1875em;
+    padding: 0.1875em 0.625em;
+    &:before {
+      width: 0;
+    }
+  }
+}
+
+.pagination {
+  margin-left: 0;
+  margin-bottom: 1rem;
+  a,
+  button {
+    color: #0a0a0a;
+  }
+  li {
+    font-size: 0.875rem;
+    margin-right: 0.0625rem;
+    display: none;
+    &:last-child,
+    &:first-child {
+      display: inline-block;
+    }
+  }
+  .current {
+    //padding: 0.1875rem 0.625rem;
+    background: #00D0BD;
+    color: #fff;
+    cursor: default;
+    a {
+      color: #fff;
+    }
+  }
+  .disabled {
+    padding: 0.1875rem 0.625rem;
+    color: #cacaca;
+    cursor: not-allowed;
+    &:hover {
+      background: transparent;
+    }
+  }
+  &::after {
+    clear: both;
+  }
+  &::before,
+  &::after {
+    content: ' ';
+    display: table;
+  }
+  .ellipsis::after {
+    content: '\2026';
+    padding: 0.1875rem 0.625rem;
+    color: #0a0a0a;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  .pagination li {
+    display: inline-block;
+    font-size: 0.9rem;
+    padding: 0 10px;
+    margin-right: 0;
+    line-height: 30px;
+    border-radius: 2px;
+    text-align: center;
+  }
+}
